@@ -84,7 +84,8 @@ jint Java_IntArray_sumArray(JNIEnv *env, jobject obj, jintArray arr)
 }
 ```
 
-### jstring(JNI) to FString(Unreal)
+### jstring to FString
+Code sample: Convert JNI's jstring to Unreal's FString
 ```c++
 FString GetFString(JNIEnv* Env, jstring JavaStringObject)
 {
