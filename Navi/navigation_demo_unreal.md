@@ -9,6 +9,26 @@ https://guides.github.com/features/mastering-markdown/
 ### Coding Standard
 https://docs.unrealengine.com/en-us/Programming/Development/CodingStandard
 
+## Unreal Multithreading
+
+### FRunnable / FRunnableThread
+https://api.unrealengine.com/INT/API/Runtime/Core/HAL/FRunnable/index.html
+https://api.unrealengine.com/INT/API/Runtime/Core/HAL/FRunnableThread/index.html
+
+### FCriticalSection / FScopeLock
+https://api.unrealengine.com/INT/API/Runtime/Core/Unix/FCriticalSection/index.html
+https://api.unrealengine.com/INT/API/Runtime/Core/Misc/FScopeLock/index.html
+```c++
+{
+    // Synchronize thread access to the following data
+    FScopeLock ScopeLock(SynchObject);
+    
+    // Access data that is shared among multiple threads
+    ...
+    // When ScopeLock goes out of scope, other threads can access data
+} 
+```
+
 ## Unreal Plugin
 
 ### Unreal Plugin overview
