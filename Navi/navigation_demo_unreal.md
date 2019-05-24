@@ -91,7 +91,7 @@ FString GetFString(JNIEnv* Env, jstring JavaStringObject)
 {
 	const char* UTFString = Env->GetStringUTFChars(JavaStringObject, 0);
 	FString result = FString(UTF8_TO_TCHAR(UTFString));
-	Env->ReleaseStringUTFChars(JavaStringObject, UTFString); // release java resource, it's very important!
+	Env->ReleaseStringUTFChars(JavaStringObject, UTFString); // release jni resource, it's very important!
 	return result;
 }
 ```
