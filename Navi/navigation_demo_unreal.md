@@ -83,3 +83,14 @@ jint Java_IntArray_sumArray(JNIEnv *env, jobject obj, jintArray arr)
     UE_LOG(LogTemp, Warning, TEXT("MethodID_TestManager_init=%p"), MethodID_TestManager_init);
 }
 ```
+
+### jstring(JNI) to FString(Unreal)
+```c++
+FString GetFString(JNIEnv* Env, jstring JavaStringObject)
+{
+	const char* UTFString = Env->GetStringUTFChars(JavaStringObject, 0);
+	FString result = FString(UTF8_TO_TCHAR(UTFString));
+	Env->ReleaseStringUTFChars(JavaStringObject, UTFString); // release java resource, it's very important!
+	return result;
+}
+```
