@@ -1,9 +1,14 @@
 # Navigation demo made with Unreal
 
+This note is mainly about Unreal C++ development and Android JNI.
+
 ## Unreal C++
 
 ### Coding Standard
 https://docs.unrealengine.com/en-us/Programming/Development/CodingStandard
+
+### Unreal Engine API Reference
+https://api.unrealengine.com/INT/API/index.html
 
 ## Unreal Multithreading
 
@@ -39,13 +44,16 @@ D:\Program Files\Epic Games\UE_4.21\Engine\Plugins\Developer
 
 ## Java Native Interface (JNI)
 
+### JNI Specification
+https://docs.oracle.com/javase/8/docs/technotes/guides/jni/spec/jniTOC.html
+
 ### Android JNI tips
 https://developer.android.com/training/articles/perf-jni
 
 ### Android jni.h
 https://github.com/ricardoquesada/android-ndk/blob/master/usr/include/jni.h
 
-### JNI Array
+### JNI Array code sample
 ```c++
 jint Java_IntArray_sumArray(JNIEnv *env, jobject obj, jintArray arr)
 {
@@ -61,3 +69,15 @@ jint Java_IntArray_sumArray(JNIEnv *env, jobject obj, jintArray arr)
 }
 ```
 
+### Unreal JNI
+
+Unreal JNI code sample
+```c++
+{
+    jobject JavaClass_TestManager = FAndroidApplication::FindJavaClass("com/ben/testlib/TestManager");
+    UE_LOG(LogTemp, Warning, TEXT("JavaClass_TestManager=%p"), JavaClass_TestManager);
+
+    jmethodID MethodID_TestManager_init = Env->GetMethodID(JavaClass_TestManager, "<init>", "()V");
+    UE_LOG(LogTemp, Warning, TEXT("MethodID_TestManager_init=%p"), MethodID_TestManager_init);
+}
+```
