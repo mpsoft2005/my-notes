@@ -53,7 +53,7 @@ https://developer.android.com/training/articles/perf-jni
 ### Android jni.h
 https://github.com/ricardoquesada/android-ndk/blob/master/usr/include/jni.h
 
-### Signatures
+### Type Signatures
 
 Java VM Type Signatures
 
@@ -67,9 +67,9 @@ Java VM Type Signatures
 | long          | J |
 | float         | F |
 | double        | D |
-| fully-qualified-class | L fully-qualified-class ; |
-| type\[]                | \[ type |
-| method type           | ( arg-types ) ret-type |
+| fully-qualified-class  | L fully-qualified-class ; |
+| type\[]                | \[ type                   |
+| method type            | ( arg-types ) ret-type    |
 
 **For example, the Java method:**  
 
