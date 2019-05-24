@@ -74,6 +74,8 @@ jint Java_IntArray_sumArray(JNIEnv *env, jobject obj, jintArray arr)
 #### Unreal JNI code sample
 ```c++
 {
+    JNIEnv* Env = FAndroidApplication::GetJavaEnv()
+
     jobject JavaClass_TestManager = FAndroidApplication::FindJavaClass("com/ben/testlib/TestManager");
     UE_LOG(LogTemp, Warning, TEXT("JavaClass_TestManager=%p"), JavaClass_TestManager);
 
