@@ -53,6 +53,32 @@ https://developer.android.com/training/articles/perf-jni
 ### Android jni.h
 https://github.com/ricardoquesada/android-ndk/blob/master/usr/include/jni.h
 
+### Signatures
+
+Java VM Type Signatures
+
+| Java Type     | Type Signature |
+| ------------- | -------------  |
+| boolean       | Z |
+| byte          | B |
+| char          | C |
+| short         | S |
+| int           | I |
+| long          | J |
+| float         | F |
+| double        | D |
+| fully-qualified-class | L fully-qualified-class ; |
+| type\[]                | \[ type |
+| method type           | ( arg-types ) ret-type |
+
+**For example, the Java method:**  
+
+    long f (int n, String s, int[] arr); 
+
+**has the following type signature:**  
+
+    (ILjava/lang/String;[I)J 
+
 ### JNI Array code sample
 ```c++
 jint Java_IntArray_sumArray(JNIEnv *env, jobject obj, jintArray arr)
