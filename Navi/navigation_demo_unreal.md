@@ -22,7 +22,7 @@ D:\Program Files\Epic Games\UE_4.21\Engine\Plugins\Developer
 ### Android JNI tips
 https://developer.android.com/training/articles/perf-jni
 
-### Android NDK jni.h
+### Android jni.h
 https://github.com/ricardoquesada/android-ndk/blob/master/usr/include/jni.h
 
 ### JNI Array
