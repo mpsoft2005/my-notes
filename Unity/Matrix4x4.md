@@ -1,6 +1,8 @@
 # Matrices in Unity
 
-Unity中的Matrix是列优先的。
+Unity中的Matrix是列优先的。OpenGL中的Matrix也是列优先的。  
+1. [Unity Matrix](https://docs.unity3d.com/ScriptReference/Matrix4x4.html)
+2. [OpenGL Matrix](https://open.gl/transformations)
 
 ## Translation Matrix
 
