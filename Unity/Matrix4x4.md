@@ -18,9 +18,11 @@ Unity中的Matrix是列优先的。OpenGL中的Matrix也是列优先的。
 
 ## Rotation Matrix
 
-R = Ry * Rx * Rz  
-
 在Unity中需要特别注意的是旋转顺序，[Unity的官方文档](https://docs.unity3d.com/ScriptReference/Quaternion-eulerAngles.html)中有说明，先绕z轴旋转，再绕x轴旋转，最后绕y轴旋转。  
+
+```C#
+R = Ry * Rx * Rz  
+```
 
 ## localToWorldMatrix是如何计算得到的？
 
