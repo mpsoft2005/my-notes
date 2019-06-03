@@ -24,12 +24,26 @@ Unity中的Matrix是列优先的。OpenGL中的Matrix也是列优先的。
 R = Ry * Rx * Rz  
 ```
 
-## localToWorldMatrix是如何计算得到的？
+## 如何计算 localToWorldMatrix ？
 
-### 简单的情形：game object没有父节点
+### 1）简单的情形：game object没有父节点
 
 先进行scalingMatrix变换，再进行rotationMatrix变换，最后进行translationMatrix变换。
 
 ```C#
 localToWorldMatrix = translationMatrix * rotationMatrix * scalingMatrix
 ```
+
+### 2）复杂的情形：game object有父节点
+
+假定game object层级结构如下：  
+```
+myRoot  
+  myHouse  
+    theDoor  
+```
+theDoor的父节点是myHouse，myHouse的父节点是myRoot，myRoot没有父节点。  
+
+transformationMatrix = translationMatrix * rotationMatrix * scalingMatrix  
+
+localToWorldMatrix = transformationMatrix<sub>**myRoot**</sub> \* transformationMatrix<sub>**myHouse**</sub> \* transformationMatrix<sub>**theDoor**</sub>
