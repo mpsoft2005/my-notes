@@ -4,6 +4,9 @@ Unity中的Matrix是列优先的。OpenGL中的Matrix也是列优先的。
 1. [Unity Matrix](https://docs.unity3d.com/ScriptReference/Matrix4x4.html)
 2. [OpenGL Matrix](https://open.gl/transformations)
 
+Links:  
+1. [3D Transformations](http://www.cs.cornell.edu/courses/cs4620/2010fa/lectures/03transforms3d.pdf)
+
 ## Translation Matrix
 
 ![translation matrix](https://github.com/mpsoft2005/MyNotes/blob/master/Unity/Images/matrix/translation-matrix.png?raw=true)
@@ -47,3 +50,8 @@ theDoor的父节点是myHouse，myHouse的父节点是myRoot，myRoot没有父�
 transformationMatrix = translationMatrix * rotationMatrix * scalingMatrix  
 
 localToWorldMatrix = transformationMatrix<sub>**myRoot**</sub> \* transformationMatrix<sub>**myHouse**</sub> \* transformationMatrix<sub>**theDoor**</sub>
+
+## Code Sample
+
+https://github.com/mpsoft2005/MyNotes/blob/master/Unity/Scripts/TestTransform.cs
+
