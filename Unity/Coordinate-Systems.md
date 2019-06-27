@@ -1,24 +1,24 @@
 # Unity中的坐标系与变换矩阵
 
 ## 坐标系 (Coordinate System)：
-1. object space (local space, model space)
-2. world space (global space)
-3. camera space (eye space, view space)
-4. clip space
-5. screen space
+1. Object space (Local space, Model space)
+2. World space (Global space)
+3. Camera space (Eye space, View space)
+4. Clip space
+5. Screen space
 
 ## 变换矩阵 (Transformation Matrix)
-### object space to world space
+### Object space to World space
     a) localToWorldMatrix  
     b) Model Matrix in OpenGL  
-### world space to camera space
+### World space to Camera space
     a) worldToCameraMatrix  
     b) View Matrix in OpenGL  
-### camera space to clip space
+### Camera space to Clip space
     a) projectionMatrix  
     b) Projection Matrix in OpenGL  
-### clip space to screen space
+### Clip space to Screen space
     这里不用矩阵，直接映射  
 
 ## MVP Matrix
-    MVP = Projection * View * Model
+    MVP Matrix = Projection Matrix * View Matrix * Model Matrix
