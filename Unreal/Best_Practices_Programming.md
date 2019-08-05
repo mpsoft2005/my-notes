@@ -47,7 +47,7 @@ https://en.wikipedia.org/wiki/Domain-driven_design
 TDD (Test-driven development)  
 https://en.wikipedia.org/wiki/Test-driven_development
 
-AOP (Aspect-oriented programming)
+AOP (Aspect-oriented programming)  
 https://en.wikipedia.org/wiki/Aspect-oriented_programming
 
 
